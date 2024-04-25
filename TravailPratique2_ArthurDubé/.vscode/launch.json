@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Debug",
+        "type": "php",
+        "request": "launch",
+        "pathMappings": {
+          "/var/www/html": "${workspaceFolder}"
+        }
+      },
+      {
+        "name": "Debug Tests",
+        "type": "php",
+        "request": "launch"
+      }
+    ]
+  }
