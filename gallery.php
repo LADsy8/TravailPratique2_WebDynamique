@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="css/app.css">
     <script src="js/app.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <?php require_once __DIR__."/live-reload.php"; ?>
     <style>
         body {
@@ -48,62 +49,71 @@
     </style>
 </head>
 <body>
-    <header>
-        <a href="index.php">
-            <img src="img/noto_blank.svg" alt="Noto" />
-            <span>Noto</span>
-        </a>
+    <header class="px-6 py-4 flex items-center text-white">
+        <div class="flex justify-self-start">
+            <a class="flex" href="index.php">
+                <img src="img/noto_blank.svg" class="h-6 w-6 lg:h-10 lg:w-10" alt="Noto" />
+                <span class="flex text-white px-2" >Noto</span>
+            </a>
+        </div>
+        <div class="flex justify-self-end">
+            <a class="hover:opacity-80" href="#">
+                    Se déconnecter
+            </a>
+        </div>
     </header>
     <main>
-        <h1>Gallerie de composants</h1>
+        <h1 class="text-white">Gallerie de composants</h1>
         <article>
-            <section class="center">
+            <section class="center text-white">
                 <h2>Bouton style hyperlien</h2>
-                <a href="#">
+                <a class="hover:opacity-80" href="#">
                     Créer mon compte
                 </a>
             </section>
-            <section class="center">
+            <section class="center text-white">
                 <h2>Bouton avec bordure</h2>
-                <a href="#">
+                <a class="hover:opacity-80 px-5 py-1 border-white border-2 rounded" href="#">
                     Se connecter
                 </a>
             </section>
-            <section class="center">
+            <section class="center text-white">
                 <h2>Bouton plat</h2>
-                <a href="#">
+                <a class="hover:opacity-80" href="#">
                     Se déconnecter
                 </a>
             </section>
-            <section class="center">
+            <section class="center text-white">
                 <h2>Bouton plat avec icône</h2>
-                <a href="#">
-                    <img src="img/add.svg" alt="Nouveau" />
-                    Nouveau
-                </a>
+                <div class="flex items-center">
+                    <a class="flex hover:bg-gray-900 px-5 py-1 rounded" href="#">
+                        <img class="pr-1.5" src="img/add.svg" alt="Nouveau" />
+                        Nouveau
+                    </a>
+                </div>
             </section>
-            <section class="center">
+            <section class="center text-white">
                 <h2>Bouton circulaire</h2>
-                <a href="#">
+                <a class="p-1.5 hover:bg-gray-900 rounded-full" href="#">
                     <img src="img/back.svg" alt="Retour" />
                 </a>
             </section>
-            <section>
-                <h2>Bouton primaire</h2>
-                <a href="#">
-                    Créer un compte
-                </a>
-            </section>
-            <section>
-                <h2>Bouton primaire large</h2>
-                <a href="#">
+            <section class="center text-white">
+                <h2>Bouton style hyperlien</h2>
+                <a class="px-5 py-2 bg-[#b83daf] hover:bg-[#c154b7] rounded" href="#">
                     Créer mon compte
                 </a>
             </section>
-            <section>
+            <section class="center text-white">
+                <h2>Bouton style hyperlien</h2>
+                <a class="px-5 py-2 hover:bg-gray-900 rounded" href="#">
+                    Créer mon compte
+                </a>
+            </section>
+            <section class="center text-white">
                 <h2>Bouton primaire avec icône</h2>
-                <a href="#">
-                    <img src="img/add.svg" alt="Nouveau" />
+                <a class="flex items-center px-5 py-2 bg-[#b83daf] hover:bg-[#c154b7] rounded" href="#">
+                    <img class="flex text-justify" src="img/add.svg" alt="Nouveau" />
                     Créer ma première note
                 </a>
             </section>
