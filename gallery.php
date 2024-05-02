@@ -117,55 +117,62 @@
                     Créer ma première note
                 </a>
             </section>
-            <section>
+            <section class="text-white">
                 <h2>Champ de texte</h2>
-                <input type="text" />
+                <input type="text" class="rounded bg-gray-900" />
             </section>
-            <section>
+            <section class="text-white">
                 <h2>Champ de texte transparent</h2>
-                <input type="text" />
+                <input type="text" class="bg-transparent"/>
             </section>
-            <section>
+            <section class="text-white ">
                 <h2>Zone de texte</h2>
-                <textarea rows="2"></textarea>
+                <textarea rows="2" class="bg-gray-900"></textarea>
             </section>
-            <section>
+            <section class="text-white">
                 <h2>Zone de texte transparent</h2>
-                <textarea rows="2"></textarea>
+                <textarea rows="2" class="bg-transparent border-none"></textarea>
             </section>
-            <section class="center">
+            <section class="center text-white">
                 <h2>Logo</h2>
                 <a href="#">
-                    <img src="img/noto_blank.svg" alt="Noto"/>
+                    <img src="img/noto_blank.svg" class="h-6 w-6" alt="Noto"/>
                 </a>
             </section>
-            <section class="center">
+            <section class="center text-white">
                 <h2>Logo large</h2>
                 <a href="#">
-                    <img src="img/noto_blank.svg" alt="Noto"/>
+                    <img src="img/noto_blank.svg" class="h-10 w-10" alt="Noto"/>
                 </a>
             </section>
-            <section class="center">
+            <section class="center text-white" class="flex justify-self-start">
                 <h2>Logo avec texte</h2>
-                <a href="#">
+                <a href="#" class="flex">
                     <img src="img/noto_blank.svg" alt="Noto"/>
-                    <span>Noto</span>
+                    <span class="pl-2">Noto</span>
                 </a>
             </section>
-            <section>
+            <section class="text-white">
                 <h2>Carte</h2>
-                <div>
-                    Lorem ipsum
+                <div class="card border-gray-900 rounded border-2 pt-2 px-2">
+                    <div class="">
+                        Lorem isadibaskjdhsajjk sdanjda uabjbajb  b b jbdhb dsh bhjbhb jb jbsjbdjbjb jbj bjb
+                    </div>
+                    <div class="hover:opacity-100 opacity-0 pd-1">
+                        dfsfsdfsdf
+                        <btn class="rounded-full"> sss</btn>
+                        <btn class="rounded-full">ssss </btn>
+                    </div>
                 </div>
             </section>
-            <section>
+            <section class="text-white">
                 <h2>Carte avec titre</h2>
                 <div class="card">
                     <h1>Lorem ipsum</h1>
                     Dolor sit amet
                 </div>
             </section>
-            <section>
+            <section class="text-white">
                 <h2>Carte de couleur</h2>
                 <div>
                     Carte rouge
@@ -183,7 +190,7 @@
                     Carte bleu
                 </div>
             </section>
-            <section>
+            <section class="text-white">
                 <h2>Color picker</h2>
                 <fieldset>
                     <input name="color" type="radio" checked />
@@ -194,7 +201,7 @@
                     <input name="color" value="blue" type="radio" />
                 </fieldset>
             </section>
-            <section>
+            <section class="text-white">
                 <h2>Erreurs</h2>
                 <ul>
                     <li>Le contenu est requis.</li>
