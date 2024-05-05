@@ -22,3 +22,19 @@ body {
 main {
     overflow-y: scroll;
 }
+
+.color-label {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked+.color-label {
+    border: 2px solid white;
+}
