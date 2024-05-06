@@ -42,8 +42,8 @@
     <div class="h-12">
 
     </div>
-    <main class="h-10 p-0 m-o self-center">
-        <div class=" border-white border-2 self-center space-around">
+    <main class="">
+        <div class="border-white border-2 w-[1300px] h-[400px]">
 
         </div>
     </main>
