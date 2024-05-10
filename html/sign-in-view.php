@@ -24,7 +24,8 @@ div {
         <div class="text-white border-2 border-white h-auto w-[400px] rounded bg-[#181b20] mt-4">
             <form method="post" action="sign-in.php" class="p-4">
                 <?php if (empty($errors) === false) { ?>
-                <div class="form-errors">
+                <div
+                    class="list-disc bg-[#da3e5233] bg-opacity-15 border-2 border-[#da3e52] border-opacity-15 rounded-lg p-4 pl-8">
                     <h2>Erreur de connexion</h2>
                     <ul>
                         <?php

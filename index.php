@@ -10,4 +10,4 @@ $user = null;
 if (!$user)
     require_once __DIR__ . "/html/index-view.php";
 else
-    require_once __DIR__ . "/html/list-view.php";
+    require_once __DIR__ . "/Note-data.php";
