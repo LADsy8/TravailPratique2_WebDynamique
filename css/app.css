@@ -1,7 +1,12 @@
-*,
+/**,
 *::before,
 *::after {
     box-sizing: border-box;
+}*/
+
+html {
+    width: 100%;
+    background-color: #0d1117;
 }
 
 @font-face {
@@ -15,10 +20,12 @@ body {
     height: 100dvh;
     background: #0d1117;
     font-family: Inter, sans-serif;
+    width: 100%;
 }
 
 main {
-    overflow-y: scroll;
+    max-width: screen;
+    border: none;
 }
 
 .color-label {
