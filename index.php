@@ -8,6 +8,6 @@ $user = null;
 
 // TODO : Remarquez que la vue change si l'utilisateur est connecté ou pas.
 if (!$user)
-    require_once __DIR__ . "/html/index-view.php";
+    require_once __DIR__ . "/Note-data.php";
 else
     require_once __DIR__ . "/Note-data.php";

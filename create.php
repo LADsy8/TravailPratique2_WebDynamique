@@ -6,6 +6,4 @@ require_once __DIR__ . "/src/forms.php";
 
 
 
-require_once __DIR__ . "/html/empty-view.php";
-
-#require_once __DIR__ . "/html/Note-view.php";
+require_once __DIR__ . "/html/Note-view.php";

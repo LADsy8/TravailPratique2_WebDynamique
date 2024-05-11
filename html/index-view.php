@@ -22,7 +22,7 @@
 </head>
 
 <body class="">
-    <nav class="px-6 py-4 flex text-white h-max content-center justify-between">
+    <nav class="px-6 py-4 flex text-white h-max content-center justify-between items-center">
         <div class="justify-self-start">
             <a class="flex" href="index.php">
                 <img src="img/noto_blank.svg" class="h-6 w-6 lg:h-6 lg:w-6" alt="Noto" />

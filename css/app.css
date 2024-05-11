@@ -43,3 +43,17 @@ input[type="radio"] {
 input[type="radio"]:checked+.color-label {
     border: 2px solid white;
 }
+
+textarea::-webkit-resizer {
+    display: none;
+
+}
+
+input {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    outline: none;
+}
