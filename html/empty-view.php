@@ -31,7 +31,7 @@
                 </a>
             </div>
             <div class="justify-items-end flex">
-                <a class="flex hover:bg-[#181b20] px-5 py-2 rounded" href="create.php">
+                <a class="flex hover:bg-[#181b20] px-5 py-2 rounded" href="new.php">
                     <img class="pr-1.5" src="img/add.svg" alt="Nouveau" />
                     Nouveau
                 </a>
@@ -43,7 +43,7 @@
     </header>
     <main class="flex flex-col justify-center items-center h-screen">
         <p class="text-5xl mb-6 text-white font-bold">Il n'y a rien ici</p>
-        <a class="flex items-center px-8 py-4 bg-[#b83daf] hover:bg-[#c154b7] rounded text-white" href="create.php">
+        <a class="flex items-center px-8 py-4 bg-[#b83daf] hover:bg-[#c154b7] rounded text-white" href="new.php">
             <img class="flex text-justify pr-2" src="img/add.svg" alt="Nouveau" />
             Créer ma première note
         </a>

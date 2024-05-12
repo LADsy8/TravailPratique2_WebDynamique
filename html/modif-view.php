@@ -25,7 +25,7 @@
     <header>
         <nav class="px-6 py-4 flex text-white h-max content-center justify-between items-center">
             <div class="justify-self-start flex items-center">
-                <a class="p-1.5 hover:bg-[#181b20] rounded-full" href="Note-data.php">
+                <a class="p-1.5 hover:bg-[#181b20] rounded-full" href="index.php">
                     <img src="img/back.svg" alt="Retour" />
                 </a>
                 <a class="flex items-center pl-1.5" href="index.php">
@@ -34,7 +34,7 @@
                 </a>
             </div>
             <div class="justify-items-end flex items-center">
-                <a class="flex hover:bg-[#181b20] px-5 py-2 rounded" href="create.php">
+                <a class="flex hover:bg-[#181b20] px-5 py-2 rounded" href="new.php">
                     <img class="pr-1.5" src="img/add.svg" alt="Nouveau" />
                     Nouveau
                 </a>
@@ -45,9 +45,10 @@
         </nav>
     </header>
     <main class="flex flex-col justify-center items-center">
-        <div class="border-[#777777] bg-[#181b20] border-2 h-[300px] w-[600px] flex flex-col rounded">
-            <input type="text" class="bg-transparent p-4 text-white" placeholder="Titre" />
-            <textarea rows="2" class="bg-transparent border-none px-4 flex-grow text-white"
+        <form action="edit.php" method="POST"
+            class="border-[#777777] bg-[#181b20] border-2 h-[300px] w-[600px] flex flex-col rounded">
+            <input type="text" class="bg-transparent p-4 text-white" name="title" placeholder="Titre" />
+            <textarea rows="2" class="bg-transparent border-none px-4 flex-grow text-white" name="content"
                 placeholder="Créer une note..."></textarea>
             <div class="pl-4 pb-1.5 pr-1.5 flex justify-between items-center ">
                 <fieldset class="flex">
@@ -69,13 +70,14 @@
                     <input id="color-blue" name="color" value="blue" type="radio" />
                     <label for="color-blue" class="color-label bg-[#3da5d970]"></label>
                 </fieldset>
-                <a class="flex hover:bg-[#181b20] px-5  rounded text-white justify-end" href="Note-data.php">
-                    <img class="pr-1.5" src="img/save.svg" alt="Save" />
+                <button type="submit" class="flex hover:bg-[#181b20] px-5 py-2 rounded text-white justify-end">
+                    <img class="pr-1.5" src="img/add.svg" alt="New" />
                     Enregistrer
-                </a>
+                </button>
             </div>
-        </div>
+        </form>
     </main>
+
 </body>
 
 </html>

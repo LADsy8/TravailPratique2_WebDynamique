@@ -31,7 +31,7 @@
                 </a>
             </div>
             <div class="justify-items-end flex">
-                <a class="flex hover:bg-[#181b20] px-5 py-2 rounded" href="create.php">
+                <a class="flex hover:bg-[#181b20] px-5 py-2 rounded" href="new.php">
                     <img class="pr-1.5" src="img/add.svg" alt="Nouveau" />
                     Nouveau
                 </a>
@@ -41,7 +41,7 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="grid grid-cols-1 lg:grid-cols-3 gap-x-4 gap-y-4 px-4 pt-0">
 
     </main>
 </body>

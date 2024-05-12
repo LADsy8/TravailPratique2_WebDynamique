@@ -21,22 +21,23 @@ div {
     <main class="flex flex-col border-2 border-white w-screen h-screen items-center justify-center">
         <div class="align-center py-4"> <img src="img/noto_blank.svg" class="h-10 w-10" alt="Noto" /> </div>
         <span class="align-center text-white py-4 px-16 text-2xl "> Créer un compte Noto</span>
+        <?php if (empty($errors) === false) { ?>
+        <div
+            class="list-disc bg-[#da3e5233] bg-opacity-15 border-2 border-[#da3e52] border-opacity-15 rounded-lg p-4 pl-8 text-white w-[400px]">
+
+            <ul class=" list-disc">
+                <?php
+                    foreach ($errors as $message) {
+                        echo "<li> $message </li>";
+                    }
+
+                    ?>
+            </ul>
+        </div>
+        <?php } ?>
         <div class="text-white border-2 border-white h-auto w-[400px] rounded bg-[#181b20] mt-4">
             <form method="post" action="sign-up.php" class="p-4">
-                <?php if (empty($errors) === false) { ?>
-                <div
-                    class="list-disc bg-[#da3e5233] bg-opacity-15 border-2 border-[#da3e52] border-opacity-15 rounded-lg p-4 pl-8">
-                    <h2>Choix invalide</h2>
-                    <ul>
-                        <?php
-                            foreach ($errors as $message) {
-                                echo "<li> $message </li>";
-                            }
 
-                            ?>
-                    </ul>
-                </div>
-                <?php } ?>
                 <div class="mb-4 flex-wrap flex">
                     <label for="email" class="pb-1.5">Courriel</label>
                     <input type="text" class="rounded bg-[#0d1117] w-[400px] h-8" name="email" id="email" required>
@@ -48,7 +49,7 @@ div {
                 </div>
                 <div class="mb-4 flex-wrap flex">
                     <label for="confirm_password" class="pb-1.5">Confirmation du mot de passe</label>
-                    <input type="password" class="rounded bg-[#0d1117] w-[400px] h-8" name="confirm_password"
+                    <input type="password" class="rounded bg-[#0d1117] w-[400px] h-8" name="passwordConfirmation"
                         id="confirm_password" required>
                 </div>
                 <button type="submit"

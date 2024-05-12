@@ -1,9 +1,11 @@
-<?php declare(strict_types=1);
-session_start();
+<?php
+if (session_id() == "") {
+    session_start();
+}
 require_once __DIR__ . "/src/config.php";
-require_once __DIR__."/src/forms.php";
-require_once __DIR__."/src/database.php";
-require_once __DIR__."/src/user.php";
+require_once __DIR__ . "/src/forms.php";
+require_once __DIR__ . "/src/database.php";
+require_once __DIR__ . "/src/user.php";
 
 $form = new SignInForm();
 $errors = [];
@@ -18,9 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $user = $user_dao->find($form->email, $form->password);
         if ($user) {
-            $_SESSION["email"] = $form->email;
+            $_SESSION["user_id"] = $user['id'];
 
-            header("location:index.php");
+            header("Location: index.php");
             exit;
         } else {
             $errors[] = "Identifiants invalides.";
@@ -28,4 +30,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-require_once __DIR__."/html/sign-in-view.php";
+require_once __DIR__ . "/html/sign-in-view.php";
