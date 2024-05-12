@@ -115,7 +115,6 @@ class NoteForm
             $errors[] = "Le contenu est requis.";
         }
 
-        
         $validColors = ["clear", "red", "orange", "yellow", "green", "blue"];
         if (empty($this->color)) {
             $errors[] = "La couleur est requise.";

@@ -51,7 +51,7 @@
                     name="content" placeholder="Créer une note..."></textarea>
                 <div class="pl-4 pb-1.5 pr-1.5 flex justify-between items-center ">
                     <fieldset class="flex">
-                        <input id="color-black" name="color" value="black" type="radio" checked />
+                        <input id="color-black" name="color" value="clear" type="radio" checked />
                         <label for="color-black" class="color-label bg-black mr-1"></label>
 
                         <input id="color-red" name="color" value="red" type="radio" />
@@ -75,6 +75,20 @@
                     </button>
                 </div>
             </form>
+            <?php if (empty($errors) === false) { ?>
+            <div
+                class="list-disc bg-[#da3e5233] bg-opacity-15 border-2 border-[#da3e52] border-opacity-15 rounded-lg p-4 pl-8 text-white w-[600px] flex mt-4 ">
+
+                <ul class=" list-disc">
+                    <?php
+                        foreach ($errors as $message) {
+                            echo "<li> $message </li>";
+                        }
+
+                        ?>
+                </ul>
+            </div>
+            <?php } ?>
 
         </main>
 

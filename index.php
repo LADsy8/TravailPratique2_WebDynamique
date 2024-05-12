@@ -19,6 +19,8 @@ if (isset($_SESSION['user_id'])) {
     $count = $statement->fetchColumn();
 
     if ($count > 0) {
+        $note_dao = new NoteDAO($db);
+        $notes = $note_dao->getAllNotes($user_id);
         require_once __DIR__ . "/html/Note-view.php";
         exit;
     }

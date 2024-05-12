@@ -45,14 +45,17 @@
         </nav>
     </header>
     <main class="flex flex-col justify-center items-center">
+
         <form action="edit.php" method="POST"
-            class="border-[#777777] bg-[#181b20] border-2 h-[300px] w-[600px] flex flex-col rounded">
-            <input type="text" class="bg-transparent p-4 text-white" name="title" placeholder="Titre" />
+            class=" border-[#777777] bg-[#181b20] border-2 h-[300px] w-[600px] flex flex-col rounded">
+            <input type="hidden" name="noteId" value="<?= isset($noteId) ? htmlspecialchars($noteId) : '' ?>">
+            <input type="text" class="bg-transparent p-4 text-white" name="title" placeholder="Titre"
+                value="<?= isset($note['title']) ? htmlspecialchars($note['title']) : '' ?>" />
             <textarea rows="2" class="bg-transparent border-none px-4 flex-grow text-white" name="content"
-                placeholder="Créer une note..."></textarea>
+                placeholder="Créer une note..."><?= isset($note['content']) ? htmlspecialchars($note['content']) : '' ?></textarea>
             <div class="pl-4 pb-1.5 pr-1.5 flex justify-between items-center ">
                 <fieldset class="flex">
-                    <input id="color-black" name="color" value="black" type="radio" checked />
+                    <input id="color-black" name="color" value="clear" type="radio" checked />
                     <label for="color-black" class="color-label bg-black mr-1"></label>
 
                     <input id="color-red" name="color" value="red" type="radio" />
@@ -76,6 +79,20 @@
                 </button>
             </div>
         </form>
+        <?php if (empty($errors) === false) { ?>
+        <div
+            class="list-disc bg-[#da3e5233] bg-opacity-15 border-2 border-[#da3e52] border-opacity-15 rounded-lg p-4 pl-8 text-white w-[600px] flex mt-4 ">
+
+            <ul class=" list-disc">
+                <?php
+                    foreach ($errors as $message) {
+                        echo "<li> $message </li>";
+                    }
+
+                    ?>
+            </ul>
+        </div>
+        <?php } ?>
     </main>
 
 </body>

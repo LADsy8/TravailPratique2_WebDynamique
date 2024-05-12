@@ -18,8 +18,7 @@ div {
 </style>
 
 <body>
-    <?php var_dump($_POST); ?>
-    </php>php <main class="flex flex-col border-2 border-white w-screen h-screen items-center justify-center">
+    <main class="flex flex-col border-2 border-white w-screen h-screen items-center justify-center">
         <div class="align-center py-4"> <img src="img/noto_blank.svg" class="h-10 w-10" alt="Noto" /> </div>
         <span class="align-center text-white py-4 px-16 text-2xl "> Se connecter à Noto</span>
         <?php if (empty($errors) === false) { ?>
